@@ -182,7 +182,7 @@ const showWord = (word) => {
 }
 
 const showReplayBtn = (btnText) => {
-    const btnElement = document.createElement('div')
+    const btnElement = document.createElement('p')
     btnElement.textContent = btnText
     btnDisplay.append(btnElement)
 }
