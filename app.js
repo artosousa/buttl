@@ -175,8 +175,14 @@ const showMessage = (message) => {
 
 const showWord = (word) => {
     const wordElement = document.createElement('p')
+    const btnElement = document.createElement('span')
+    btnElement.addEventListener('click', () =>{
+        location.reload();
+    })
     wordElement.textContent = word
+    btnElement.textContent = 'Play Again'
     wordDisplay.append(wordElement)
+
 }
 
 const addColorToKey = (keyLetter, color) => {
