@@ -2,7 +2,7 @@ const tileDisplay = document.querySelector('.tile-container')
 const keyboard = document.querySelector('.key-container')
 const messageDisplay = document.querySelector('.message-container')
 const wordDisplay = document.querySelector('.word-container')
-const btnDisplay = document.querySelector('btn-container')
+const replayButton = document.querySelector('.replay')
 
 let buttl
 
@@ -181,9 +181,9 @@ const showWord = (word) => {
     wordDisplay.append(wordElement)
 }
 
-const showReplayBtn = (btnText) => {
+const showReplayBtn = (msg) => {
     const replayElement = document.createElement('p')
-    replayElement.textContent = btnText
+    replayElement.textContent = msg
     btnDisplay.append(replayElement)
 }
 
