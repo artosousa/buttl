@@ -4,7 +4,11 @@ const messageDisplay = document.querySelector('.message-container')
 const wordDisplay = document.querySelector('.word-container')
 const replayButton = document.querySelector('.replay')
 
+replayButton.addEventListener('click', () =>{
+    location.reload();
+})
 let buttl
+
 
 const getButtl = () => {
     fetch('/.netlify/functions/word')
@@ -86,7 +90,7 @@ document.addEventListener('keydown', (event) => {
     }
 })
 keys.forEach(key => {
-    const buttonElement = document.createElement('button')
+    const buttonElement = document.createElement('p')
     buttonElement.textContent = key
     buttonElement.setAttribute('id', key)
     buttonElement.addEventListener('click', () => handleClick(key))
