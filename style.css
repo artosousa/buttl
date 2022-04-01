@@ -16,6 +16,7 @@ body {
     justify-content: center;
     height:20px;
     width:200px;
+    cursor: pointer;
 }
 .game-container {
     height: 90vh;
