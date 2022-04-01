@@ -1,6 +1,7 @@
 const tileDisplay = document.querySelector('.tile-container')
 const keyboard = document.querySelector('.key-container')
 const messageDisplay = document.querySelector('.message-container')
+const wordDisplay = document.querySelector('.word-container')
 
 let buttl
 
@@ -152,7 +153,7 @@ const checkRow = () => {
                     } else {
                         if (currentRow >= 5) {
                             isGameOver = true
-                            showMessage(`Game Over - Word was: ${buttl}`)
+                            showWord(`Game Over - Word was: ${buttl}`)
                             return
                         }
                         if (currentRow < 5) {
@@ -170,6 +171,12 @@ const showMessage = (message) => {
     messageElement.textContent = message
     messageDisplay.append(messageElement)
     setTimeout(() => messageDisplay.removeChild(messageElement), 2000)
+}
+
+const showWord = (word) => {
+    const wordElement = document.createElement('p')
+    wordElement.textContent = word
+    wordDisplay.append(wordElement)
 }
 
 const addColorToKey = (keyLetter, color) => {
