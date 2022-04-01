@@ -182,9 +182,9 @@ const showWord = (word) => {
 }
 
 const showReplayBtn = (msg) => {
-    const replayElement = document.createElement('p')
+    const replayElement = document.createElement('button')
     replayElement.textContent = msg
-    btnDisplay.append(replayElement)
+    replayButton.append(replayElement)
 }
 
 const addColorToKey = (keyLetter, color) => {
