@@ -4,12 +4,11 @@ const messageDisplay = document.querySelector('.message-container')
 const wordDisplay = document.querySelector('.word-container')
 const replayButton = document.querySelector('.replay')
 
-replayButton.addEventListener('click', () =>{
-    location.reload();
-})
 let buttl
 
-
+replayButton.addEventListener('click', function() {
+    location.reload();
+});
 const getButtl = () => {
     fetch('/.netlify/functions/word')
         .then(response => response.text())
@@ -90,7 +89,7 @@ document.addEventListener('keydown', (event) => {
     }
 })
 keys.forEach(key => {
-    const buttonElement = document.createElement('p')
+    const buttonElement = document.createElement('button')
     buttonElement.textContent = key
     buttonElement.setAttribute('id', key)
     buttonElement.addEventListener('click', () => handleClick(key))
@@ -186,7 +185,7 @@ const showWord = (word) => {
 }
 
 const showReplayBtn = (msg) => {
-    const replayElement = document.createElement('button')
+    const replayElement = document.createElement('p')
     replayElement.textContent = msg
     replayButton.append(replayElement)
 }
