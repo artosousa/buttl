@@ -155,7 +155,7 @@ const checkRow = () => {
                         if (currentRow >= 5) {
                             isGameOver = true
                             showWord(`Game Over - Word was: ${buttl}`)
-                            showReplayBtn();
+                            showReplayBtn('Play Again');
                             return
                         }
                         if (currentRow < 5) {
@@ -181,9 +181,9 @@ const showWord = (word) => {
     wordDisplay.append(wordElement)
 }
 
-const showReplayBtn = () => {
+const showReplayBtn = (btnText) => {
     const btnElement = document.createElement('div')
-    btnElement.textContent = 'Play Again'
+    btnElement.textContent = btnText
     btnDisplay.append(btnElement)
 }
 
